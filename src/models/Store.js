@@ -3,36 +3,28 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const reviewSchema = new Schema({
+const storeSchema = new Schema({
   autoUpdatedAt: true,
-  title: {
+  email: {
     type: String,
     required: true
   },
-  content: {
+  store_name: {
     type: String,
     required: true
   },
-  store_id: {
+
+  user_id: {
     type: String,
     required: true
   },
-  customer_id: {
-    type: String,
-    required: true
-  },
-  rating: {
-    type: Number,
-    required: true,
-    min: 1,
-    max: 5
-  },
+  
   createdAt: {
     type: Date,
     default: Date.now
   }
 });
 
-const Review = mongoose.model("Review", reviewSchema);
+const Store = mongoose.model("Store", storeSchema);
 
-export default Review;
+export default Store;
