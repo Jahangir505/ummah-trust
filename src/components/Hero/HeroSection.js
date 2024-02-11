@@ -74,7 +74,7 @@ const HeroSection = () => {
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Enriched insights, intuitive features, expert advice: everything you
             need to transform your customer experience, from discovery to
-            advocate. Better decisions, every time&nbsp;
+            advocate. Better decisions, every time
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
