@@ -1,7 +1,7 @@
 // pages/index.js
 
-import ReviewForm from "@/components/ReviewForm";
-import ReviewList from "@/components/ReviewList";
+import PublicLayout from "@/components/HOC/PublicLayout";
+import HeroSection from "@/components/Hero/HeroSection";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -21,13 +21,11 @@ const Home = () => {
     fetchReviews();
   }, []);
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-3xl font-bold mb-8">Review Service</h1>
-      <div className="grid grid-cols-2 gap-4">
-        <ReviewForm />
-        <ReviewList reviews={reviews} />
+    <PublicLayout pageTitle={"Home"}>
+      <div className="min-h-screen bg-gray-100">
+        <HeroSection />
       </div>
-    </div>
+    </PublicLayout>
   );
 };
 
